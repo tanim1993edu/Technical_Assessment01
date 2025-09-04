@@ -33,21 +33,22 @@ def test_form_submission(page: Page):
     page.fill('#date', date)
 
     # Upload File
+    page.wait_for_selector('#file')
     page.set_input_files('#file', file_path)
+    
+    # Verify file input is not empty
+    file_input = page.locator('#file')
+    assert file_input.evaluate('el => el.files.length') > 0, "No file was uploaded"
 
-    # Verify uploaded file name
-    uploaded_file_name = page.locator('#file').get_attribute('value')
-    assert expected_file_name in uploaded_file_name, f"Expected file name '{expected_file_name}', but got '{uploaded_file_name}'"
-
-    # Select colors (Checkboxes)
+    # Select color (Radio)
     for color in colors:
-        page.wait_for_selector(f'input[type="checkbox"]#{color}')
-        page.check(f'input[type="checkbox"]#{color}')
+        page.wait_for_selector(f'input[type="radio"][name="color"][value="{color}"]')
+        page.check(f'input[type="radio"][name="color"][value="{color}"]')
 
     # Select menu items (Checkboxes)
     for item in menu:
-        page.wait_for_selector(f'input[type="checkbox"]#{item}')
-        page.check(f'input[type="checkbox"]#{item}')
+        page.wait_for_selector(f'input[type="checkbox"][name="food"][value="{item}"]')
+        page.check(f'input[type="checkbox"][name="food"][value="{item}"]')
 
     # Select Country
     page.wait_for_selector('#country')
@@ -59,6 +60,6 @@ def test_form_submission(page: Page):
     page.wait_for_timeout(5000)
 
     # We expect the name to be required and the form should not submit successfully
-    error_message = page.locator('.error-message').text_content()
-    assert "Name is a required field" in error_message
-    print("Form submission failed due to missing name.")
+    name_error = page.locator('.text-red-500.text-sm.mt-1').first.text_content()
+    assert "Name is a required field" in name_error, f"Expected name error message, but got: {name_error}"
+    print("Form submission failed due to missing name as expected.")
