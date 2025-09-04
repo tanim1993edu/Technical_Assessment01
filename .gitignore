@@ -1,0 +1,29 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+*.pyc
+
+# Virtual Environment
+venv/
+env/
+.env/
+.venv/
+
+# IDE
+.vscode/
+.idea/
+
+# Test Reports
+reports/*/
+!reports/.gitkeep
+
+# Playwright
+.playwright-screenshots/
+test-results/
+playwright-report/
+
+# Misc
+.DS_Store
+*.log

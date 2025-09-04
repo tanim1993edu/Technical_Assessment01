@@ -1,0 +1,76 @@
+{
+  "valid_login": {
+    "email": "qa_testers@qabrains.com",
+    "password": "Password123",
+    "expected_text": "Login Successful"
+  },
+  "invalid_login": {
+    "email": "tanim@test.com",
+    "password": "Password123",
+    "expected_text": "Your email is invalid!"
+  },
+  "registration": {
+    "name": "Khaled Tanim",
+    "country": "Bangladesh",
+    "account_type": "Student",
+    "email": "tanim2@yopmail.com",
+    "password": "Tanim2@2512",
+    "confirm_password": "Tanim2@2512"
+  },
+  "feedback": {
+    "email": "tanim2@yopmail.com",
+    "password": "Tanim2@2512",
+    "comment": "All the Best."
+  },
+  "forgot_password": {
+    "email": "tanim2@yopmail.com"
+  },
+  "valid_form_submission": {
+    "name": "Khaled Tanim",
+    "email": "tanim2@yopmail.com",
+    "contact": "01684854596",
+    "date": "1993-03-22",
+    "file_path": "D:\\CV\\Latest CV\\Audacity\\Assessment3\\data\\imageqr_image_01222249917.png",
+    "expected_file_name": "image.png",
+    "colors": ["Red"],
+    "menu": ["Pasta"],
+    "country": "Bangladesh"
+  },
+  "form_submission_missing_name": {
+    "email": "tanim2@yopmail.com",
+    "contact": "01684854596",
+    "date": "1993-03-22",
+    "file_path": "D:\\CV\\Latest CV\\Audacity\\Assessment3\\data\\imageqr_image_01222249917.png",
+    "expected_file_name": "image.png",
+    "colors": ["Red"],
+    "menu": ["Pasta", "Pizza"],
+    "country": "Bangladesh"
+  },
+
+  "ecommerce_flow": {
+    "email": "test@qabrains.com",
+    "password": "Password123",
+    "first_product": "Pasta",
+    "second_product": "Pizza",
+    "cart_url": "https://practice.qabrains.com/ecommerce/cart",
+    "login_url": "https://practice.qabrains.com/ecommerce/login",
+    "ecommerce_site_url": "https://practice.qabrains.com/ecommerce",
+    "favorites": ["Pasta", "Pizza"]
+  },
+  "ecommerce_credentials": {
+    "email": "test@qabrains.com",
+    "password": "Password123",
+    "ecommerce_url": "https://practice.qabrains.com/ecommerce"
+  },
+  "checkout_data": {
+    "email": "tanim2@yopmail.com",
+    "password": "Password123",
+    "first_name": "Khaled",
+    "last_name": "Tanim",
+    "zip_code": "1212"
+  }
+}
+
+
+
+  

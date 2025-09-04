@@ -1,0 +1,45 @@
+Test ID,Test Case Name,Description,Prerequisites,Test Steps,Test Data,Expected Results,,Actual Result
+TC001,User Login with Valid Credentials,Verify that user can successfully login to the ecommerce website,"1. Valid user account exists
+2. User is on the login page","1. Enter email 'test@qabrains.com'
+2. Enter password 'Password123'
+3. Click on the 'Login' button","email: test@qabrains.com
+password: Password123","1. User is successfully logged in
+2. User is redirected to dashboard
+3. Success message is displayed",,
+TC002,Add Items to Cart,Verify that user can add multiple items to the shopping cart,"1. User is logged in
+2. User is on products page","1. Navigate to products page
+2. Click 'Add to Cart' for first product
+3. Click 'Add to Cart' for second product
+4. Navigate to cart page","Products:
+- Pasta
+- Pizza","1. Products are added successfully
+2. Cart counter is updated
+3. Products are visible in cart",,
+TC003,Complete Checkout Process,Verify that user can complete the checkout process successfully,"1. User is logged in
+2. Cart has items
+3. Shipping details available","1. Navigate to cart page
+2. Click 'Checkout'
+3. Fill shipping details (name, address)
+4. Click 'Continue'
+5. Review order
+6. Click 'Finish'","First Name: Khaled
+Last Name: Tanim
+ZIP Code: 1212","1. Order is placed successfully
+2. Confirmation page shown
+3. Order number generated",,
+TC004,Add to Favorites,Verify that user can add items to favorites list,"1. User is logged in
+2. User is on products page","1. Navigate to products page
+2. Click heart icon on first product
+3. Click heart icon on second product
+4. Navigate to favorites page","Favorite items:
+- Pasta
+- Pizza","1. Items added to favorites
+2. Favorites counter updated
+3. Items visible in favorites list",,
+TC005,Empty Cart Validation,Verify that system handles empty cart checkout correctly,"1. User is logged in
+2. Cart is empty","1. Navigate to cart page
+2. Observe checkout button
+3. Try to proceed to checkout","Cart status: Empty
+Expected message: Cart is empty","1. Checkout button disabled
+2. Empty cart message shown
+3. Cannot proceed to checkout",,
