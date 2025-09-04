@@ -7,6 +7,7 @@ This repository contains automated tests for the QA Brains practice website (htt
 tests/
 ├── authentication/       # Authentication test cases
 ├── drag&drop/           # Drag and drop test cases
+├── Form submission/     # Form submission test cases
 └── eCommerce Test/      # E-commerce test cases
 ```
 
@@ -29,6 +30,11 @@ tests/
    - Edge cases
    - Accessibility testing
    - Visual feedback
+
+4. **Form Submission Tests**
+   - Missing name validation
+   - Form validation
+   - Form submission handling
 
 ## Setup Instructions
 
@@ -67,6 +73,11 @@ pytest "tests/eCommerce Test" --html=reports/ecommerce/report.html
 pytest tests/drag&drop --html=reports/drag_and_drop/report.html
 ```
 
+4. Form Submission Tests:
+```bash
+pytest "tests/Form submission" --html=reports/form_submission/report.html
+```
+
 To run all tests:
 ```bash
 pytest tests/ -v --html=reports/all_tests/report.html
@@ -78,6 +89,7 @@ HTML reports are generated in the `reports` folder:
 - Authentication: `reports/authentication/report.html`
 - E-commerce: `reports/ecommerce/report.html`
 - Drag & Drop: `reports/drag_and_drop/report.html`
+- Form Submission: `reports/form_submission/report.html`
 - Combined: `reports/all_tests/report.html`
 
 ## Requirements
